@@ -1,0 +1,51 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+/// <summary>
+/// ===| UI 갱신 |===
+/// </summary>
+public class TitleManager : MonoBehaviour
+{
+    /// <summary>
+    /// public | ==============================
+    /// </summary>
+    public GameObject helpPanel;
+
+    /// <summary>
+    /// private | ==============================
+    /// </summary>
+
+
+    /// <summary>
+    /// ===| 1단계 이동 |===
+    /// </summary>
+    public void GoToLv1()
+    {
+        SceneManager.LoadScene("PlayScene_Door1");      // Lv1씬으로 감
+    }
+
+    /// <summary>
+    /// ===| 메인 화면 이동 |===
+    /// </summary>
+    public void GoToTitle()
+    {
+        SceneManager.LoadScene("TitleScene");   //메인씬으로 감
+    }
+
+    /// <summary>
+    /// ===| 도움말 켜짐 |===
+    /// </summary>
+    public void OpenHelp()
+    {
+        helpPanel.SetActive(true);      //도움말 판넬 켜짐
+    }
+
+    /// <summary>
+    /// ===| 도움말 꺼짐 |===
+    /// </summary>
+    public void CloseHelp()
+    {
+        helpPanel.SetActive(false);      //도움말 판넬 꺼짐
+    }
+
+}
