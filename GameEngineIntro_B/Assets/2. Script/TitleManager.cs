@@ -10,6 +10,7 @@ public class TitleManager : MonoBehaviour
     /// public | ==============================
     /// </summary>
     public GameObject helpPanel;
+    public GameObject leaderPanel;
 
     /// <summary>
     /// private | ==============================
@@ -46,6 +47,22 @@ public class TitleManager : MonoBehaviour
     public void CloseHelp()
     {
         helpPanel.SetActive(false);      //µµ¿ò¸» ÆÇ³Ú ²¨Áü
+    }
+
+    /// <summary>
+    /// ===| ¸®´õº¸µå ÄÑÁü |===
+    /// </summary>
+    public void OpenLeader()
+    {
+        leaderPanel.SetActive(true);      //¸®´õº¸µå ÆÇ³Ú ÄÑÁü
+    }
+
+    /// <summary>
+    /// ===| ¸®´õº¸µå ²¨Áü |===
+    /// </summary>
+    public void CloseLeader()
+    {
+        leaderPanel.SetActive(false);      //¸®´õº¸µå ÆÇ³Ú ²¨Áü
     }
 
 }

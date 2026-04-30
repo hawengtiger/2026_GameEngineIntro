@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1. Scenes/PlayScene_Door3.unity
     guid: d8a8ad37850e0c14082cf0412e0ec7c1
+  - enabled: 1
+    path: Assets/1. Scenes/PlayScene_Door4.unity
+    guid: 3e70a2335d45e5846b3933c9c4df43f6
+  - enabled: 1
+    path: Assets/1. Scenes/PlayScene_Door5.unity
+    guid: bbbb327ccc462644e8ed1d44d03c729a
+  - enabled: 1
+    path: Assets/1. Scenes/New Scene.unity
+    guid: 7bd29d436e3579a40a4911432540d37f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -20,11 +20,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator myAnimator;
 
+    float score;
+
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>(); 
         myAnimator = GetComponent<Animator>(); //애니메이션
         myAnimator.SetBool("move", false);  //애니메이션 초기화
+
+        score = 0f;
     }
 
     /// <summary>
@@ -100,6 +104,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            score += 200;
+            HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
             SceneManager.LoadScene("PlayScene_" + collision.name); //PlayerScene_에 닿은 트리거콜라이더 오브젝트 이름을 더함.
         }
     }
