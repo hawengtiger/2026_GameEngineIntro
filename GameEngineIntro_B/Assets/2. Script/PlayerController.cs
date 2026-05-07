@@ -104,8 +104,13 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            score += 200;
-            HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
+            /*score += 200;*/
+            /*            HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);*/
+
+            score += collision.GetComponent<ItemObject>().GetPoint();
+
+            StageResultSaver.SaveStage(SceneManager.GetActiveScene().buildIndex, (int)score);
+
             SceneManager.LoadScene("PlayScene_" + collision.name); //PlayerScene_에 닿은 트리거콜라이더 오브젝트 이름을 더함.
         }
     }
